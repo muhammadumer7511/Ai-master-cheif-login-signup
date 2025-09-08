@@ -1,33 +1,41 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
+    height: 100vh;
 }
-.container{
+.container {
     display: flex;
     height: auto;
     width: auto;
     flex-direction: row;
-    @media(max-width:950px){
-        flex-direction: column-reverse;
-        .first-section, .second-section{
-            width: 100%;
-            
-        }
+}
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+    }
+    .first-section, .second-section {
+        width: 100%;
+    }
+    .second-section {
+        margin-top: 80px;
     }
 }
-.first-section{
+.first-section {
     width: 60%;
 }
-.second-section{
+.imgg1 {
+    padding: 20px;
+}
+.second-section {
     width: 40%;
     background-color: rgb(244, 174, 11);
 }
-a{
+a {
     text-decoration: none;
 }
-.signup{
+.signup {
     width: 140px;
     display: flex;
     margin-right: 15px;
@@ -44,27 +52,28 @@ a{
     font-size: 25px;
     font-weight: 900;
 }
-.signup:hover{
+.signup:hover {
     background-color: white;
     color: rgb(255, 165, 0);
     cursor: pointer;
     transition: 1s;
 }
-.h1{
+.h1 {
     margin-left: 75px;
     font-size: 50px;
     font-style: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 50px;
 }
-.p1{
+.p1 {
     margin-left: 74px;
     position: relative;
     bottom: 20px;
     font-size: 18px;
     font-weight: 700;
 }
-.input1{
+input {
+    font-size: 21px;
+}
+.input1 {
     width: 70%;
     margin-left: 15%;
     border-radius: 10px;
@@ -73,14 +82,14 @@ a{
     box-shadow: 1px 4px 9px 1px rgba(137, 129, 129, 0.75);
     margin-top: 80px;
 }
-.label1{
+.label1 {
     margin-left: 15%;
     font-size: 20px;
     font-weight: 600;
     top: 70px;
     position: relative;
 }
-.input2{
+.input2 {
     width: 70%;
     margin-left: 15%;
     border-radius: 10px;
@@ -96,38 +105,34 @@ a{
     margin-left: 15%;
     margin-top: 60px;
 }
-
 .name-field {
     display: flex;
     flex-direction: column;
-    width: 48%; 
+    width: 48%;
 }
-
 .label3, .label4 {
-    margin-left: 0; 
+    margin-left: 0;
     font-size: 20px;
     font-weight: 600;
-    position: static; 
+    position: static;
 }
-
 .inputt3, .inputt4 {
-    width: 100%; 
-    margin-left: 0; 
+    width: 100%;
+    margin-left: 0;
     border-radius: 10px;
     height: 40px;
     border: none;
     box-shadow: 1px 4px 9px 1px rgba(137, 129, 129, 0.75);
-    margin-top: 0; 
+    margin-top: 0;
 }
-.label2{
+.label2 {
     margin-left: 15%;
     font-size: 20px;
     font-weight: 600;
     top: 50px;
     position: relative;
 }
-
-.input3{
+.input3 {
     width: 70%;
     margin-left: 15%;
     border-radius: 10px;
@@ -140,59 +145,56 @@ a{
     font-size: 25px;
     font-weight: 900;
 }
-.input3:hover{
+.input3:hover {
     background-color: white;
     color: rgb(255, 165, 0);
     cursor: pointer;
     transition: 1s;
 }
-.head2{
+.head2 {
     margin-left: 6%;
     margin-top: 30px;
     font-size: 80px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     color: white;
 }
-.head3{
+.head3 {
     margin-left: 7%;
     position: relative;
     bottom: 60px;
     font-size: 40px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
     color: white;
 }
-.para1{
+.para1 {
     color: white;
     font-size: 20px;
     margin-left: 6%;
     margin-right: 1%;
     position: relative;
     bottom: 50px;
-
 }
-.img1{
+.img1 {
     width: 80%;
     margin-left: 10%;
     position: relative;
     bottom: 70px;
 }
-.para2{
+.para2 {
     color: white;
     font-size: 23px;
     font-style: italic;
     display: flex;
-     justify-content: center;
-     position: relative;
-     bottom: 100px;
+    justify-content: center;
+    position: relative;
+    bottom: 100px;
 }
-.head4{
+.head4 {
     color: white;
-     font-size: 30px;
-     font-weight: 900;
-     display: flex;
-     justify-content: center;
-     position: relative;
-     bottom: 100px;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 100px;
 }
