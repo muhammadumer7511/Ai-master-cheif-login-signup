@@ -14,16 +14,18 @@ body {
 @media (max-width: 950px) {
     .container {
         flex-direction: column;
+
     }
-    .first-section, .second-section {
-        width: 100%;
-    }
+     
     .second-section {
         margin-top: 80px;
     }
 }
 .first-section {
     width: 60%;
+    @media(max-width: 950px) {
+        width: 100%;
+    }
 }
 .imgg1 {
     padding: 20px;
@@ -31,6 +33,9 @@ body {
 .second-section {
     width: 40%;
     background-color: rgb(244, 174, 11);
+    @media(max-width: 950px) {
+        width: 100%;
+    }
 }
 a {
     text-decoration: none;

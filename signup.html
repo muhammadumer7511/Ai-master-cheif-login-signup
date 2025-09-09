@@ -41,265 +41,47 @@
        <p class="para2">Enjoy seamless cooking on all devices.</p>
     </div>
 </div>
-<script>
-    // Insane GSAP Animations
-    // Logo: Warps in with 3D spiral and distortion
-    gsap.from(".imgg1", { 
-        duration: 2, 
-        opacity: 0, 
-        scale: 0.1, 
-        rotationX: 720, 
-        rotationY: 720, 
-        ease: "power4.out", 
-        transformOrigin: "center center", 
-        onStart: () => {
-            gsap.to(".imgg1", { 
-                duration: 0.1, 
-                x: () => Math.random() * 10 - 5, 
-                y: () => Math.random() * 10 - 5, 
-                repeat: 10, 
-                yoyo: true 
-            });
-        },
-        onComplete: () => {
-            gsap.to(".imgg1", { 
-                duration: 1.5, 
-                scale: 1.05, 
-                yoyo: true, 
-                repeat: -1, 
-                ease: "sine.inOut" 
-            });
-        }
-    });
 
-    // Title: Fragmented glitch with rapid flicker
-    gsap.from(".h1", { 
-        duration: 1.8, 
-        opacity: 0, 
-        x: -300, 
-        skewX: 45, 
-        ease: "power4.out", 
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.transform += `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
-            });
-        },
-        onComplete: () => {
-            gsap.to(".h1", { 
-                duration: 0.05, 
-                opacity: Math.random() > 0.5 ? 1 : 0.5, 
-                repeat: 10, 
-                yoyo: true 
-            });
-        }
-    });
-
-    // Subtitle: Wavy distortion with jitter
-    gsap.from(".p1", { 
-        duration: 2, 
-        opacity: 0, 
-        y: 200, 
-        ease: "elastic.out(1, 0.2)", 
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.letterSpacing = `${Math.random() * 10}px`;
-            });
-        },
-        onComplete: () => {
-            gsap.to(".p1", { duration: 0.5, letterSpacing: "normal" });
-        }
-    });
-
-    // Form Fields: Chaotic 3D flips with strobe effect
-    gsap.from(".name-field", { 
-        duration: 2, 
-        opacity: 0, 
-        rotationY: 360, 
-        rotationX: (index) => index % 2 === 0 ? 360 : -360, 
-        x: (index) => index % 2 === 0 ? -500 : 500, 
-        stagger: 0.3, 
-        ease: "power4.out", 
-        delay: 0.5,
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.opacity = Math.random() > 0.7 ? 1 : 0.3;
-            });
-        },
-        onComplete: () => {
-            gsap.to(".name-field", { duration: 0.5, opacity: 1 });
-        }
-    });
-    gsap.from(".label1, .input1", { 
-        duration: 2, 
-        opacity: 0, 
-        rotationZ: 360, 
-        scale: 0.5, 
-        ease: "back.out(2)", 
-        delay: 0.8,
-        onStart: () => {
-            gsap.to(".label1, .input1", { 
-                duration: 0.1, 
-                x: () => Math.random() * 8 - 4, 
-                repeat: 8, 
-                yoyo: true 
-            });
-        }
-    });
-    gsap.from(".label2, .input2", { 
-        duration: 2, 
-        opacity: 0, 
-        rotationZ: -360, 
-        scale: 0.5, 
-        ease: "back.out(2)", 
-        delay: 1,
-        onStart: () => {
-            gsap.to(".label2, .input2", { 
-                duration: 0.1, 
-                y: () => Math.random() * 8 - 4, 
-                repeat: 8, 
-                yoyo: true 
-            });
-        }
-    });
-
-    // Sign Up Button: Gravitational pulse with shockwave
-    gsap.from(".input3", { 
-        duration: 2, 
-        opacity: 0, 
-        scale: 0.3, 
-        rotation: 1080, 
-        ease: "elastic.out(1, 0.2)", 
-        delay: 1.2,
-        onComplete: () => {
-            gsap.to(".input3", { 
-                duration: 0.1, 
-                x: () => Math.random() * 6 - 3, 
-                y: () => Math.random() * 6 - 3, 
-                repeat: 10, 
-                yoyo: true 
-            });
-        }
-    });
-
-    // Second Section: Cyberpunk teleportation effect
-    gsap.from(".signup", { 
-        duration: 2, 
-        opacity: 0, 
-        x: 300, 
-        skewY: 30, 
-        ease: "power4.out", 
-        delay: 0.2,
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.transform += `translate(${Math.random() * 15 - 7.5}px, ${Math.random() * 15 - 7.5}px)`;
-            });
-        }
-    });
-    gsap.from(".head2", { 
-        duration: 2, 
-        opacity: 0, 
-        y: -200, 
-        scale: 2, 
-        ease: "power4.out", 
-        filter: "blur(15px)", 
-        delay: 0.4,
-        onComplete: () => {
-            gsap.to(".head2", { duration: 0.5, filter: "blur(0px)" });
-        }
-    });
-    gsap.from(".head3", { 
-        duration: 2, 
-        opacity: 0, 
-        y: -100, 
-        scale: 0.5, 
-        ease: "power4.out", 
-        delay: 0.6,
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.opacity = Math.random() > 0.6 ? 1 : 0.4;
-            });
-        },
-        onComplete: () => {
-            gsap.to(".head3", { duration: 0.5, opacity: 1 });
-        }
-    });
-    gsap.from(".para1", { 
-        duration: 2, 
-        opacity: 0, 
-        x: -200, 
-        ease: "power4.out", 
-        delay: 0.8,
-        onUpdate: function() {
-            this.targets().forEach(el => {
-                el.style.letterSpacing = `${Math.random() * 15}px`;
-            });
-        },
-        onComplete: () => {
-            gsap.to(".para1", { duration: 0.5, letterSpacing: "normal" });
-        }
-    });
-    gsap.from(".img1", { 
-        duration: 2.5, 
-        opacity: 0, 
-        scale: 0.1, 
-        rotation: 1440, 
-        ease: "power4.out", 
-        delay: 1,
-        onStart: () => {
-            gsap.to(".img1", { 
-                duration: 0.1, 
-                x: () => Math.random() * 10 - 5, 
-                y: () => Math.random() * 10 - 5, 
-                repeat: 10, 
-                yoyo: true 
-            });
-        }
-    });
-    gsap.from(".head4", { 
-        duration: 2, 
-        opacity: 0, 
-        y: 100, 
-        scale: 1.5, 
-        ease: "back.out(2)", 
-        delay: 1.2 
-    });
-    gsap.from(".para2", { 
-        duration: 2, 
-        opacity: 0, 
-        y: 100, 
-        scale: 1.5, 
-        ease: "back.out(2)", 
-        delay: 1.4 
-    });
-
-    // Hover Effects: Insane vibration and scale
-    gsap.utils.toArray([".input3", ".signup"]).forEach(button => {
-        button.addEventListener("mouseenter", () => {
-            gsap.to(button, { 
-                duration: 0.3, 
-                scale: 1.3, 
-                boxShadow: "0 0 30px rgba(137, 129, 129, 1)", 
-                ease: "power4.out",
-                onStart: () => {
-                    gsap.to(button, { 
-                        duration: 0.05, 
-                        x: () => Math.random() * 10 - 5, 
-                        y: () => Math.random() * 10 - 5, 
-                        repeat: 6, 
-                        yoyo: true 
-                    });
-                }
-            });
-        });
-        button.addEventListener("mouseleave", () => {
-            gsap.to(button, { 
-                duration: 0.3, 
-                scale: 1, 
-                boxShadow: "1px 4px 9px 1px rgba(137, 129, 129, 0.75)", 
-                ease: "power4.out" 
-            });
-        });
-    });
-</script>
 </body>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Animate the logo image
+    gsap.from(".imgg1", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out"
+    });
+
+    // Animate the main heading and paragraph
+    gsap.from(".h1, .p1", {
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        delay: 0.2,
+        stagger: 0.2,
+        ease: "power2.out"
+    });
+
+    // Animate form inputs and labels
+    gsap.from(".name-container, .input1, .input2, .input3, .label1, .label2, .label3, .label4", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.4,
+        stagger: 0.1,
+        ease: "power2.out"
+    });
+
+    // Animate second section elements
+    gsap.from(".signup, .head2, .head3, .para1, .img1, .head4, .para2", {
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        delay: 0.6,
+        stagger: 0.2,
+        ease: "power2.out"
+    });
+});
+</script>
